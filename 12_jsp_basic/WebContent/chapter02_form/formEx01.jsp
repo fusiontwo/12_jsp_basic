@@ -4,6 +4,14 @@
 <head>
 <meta charset="UTF-8">
 <title>데이터 전송 기초1</title>
+<script>
+	
+	function sendData() {
+		// submit(); 함수를 사용하여 폼데이터를 서버로 전송한다.
+		document.f.submit();
+	}
+	
+</script>
 </head>
 <body>
 
@@ -36,6 +44,16 @@
 	</form>
 	
 	<!-- 방법2) 자바스크립트를 이용하여 전송한다. (form의 name값이 설정되어 있어야 가능하다.) -->
+	<form action="formEx01Pro.jsp" method="post" name="f">
+		<fieldset>
+			<legend>개인정보 입력</legend>
+			<p>이름 : <input type="text" name="name"></p>
+			<p>연락처 : <input type="text" name="contact"></p>
+			<p>나이 : <input type="text" name="age"></p>
+			<p><input type="button" value="입력" onclick="sendData();"></p>
+		</fieldset>
+	</form>
+	
 	
 </body>
 </html>

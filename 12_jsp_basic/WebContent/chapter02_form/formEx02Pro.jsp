@@ -8,9 +8,9 @@
 </head>
 <body>
 
-	<%
-		
-		request.setCharacterEncoding("UTF-8");
+	<% 
+	
+		request.setCharacterEncoding("utf-8");
 	
 		String data1 = request.getParameter("data1");
 		String data2 = request.getParameter("data2");
@@ -24,6 +24,33 @@
 		String[] data10 = request.getParameterValues("data10");
 		
 	%>
+	
+	<fieldset>
+		<p>1. 텍스트 : <%=data1 %></p>
+		<p>2. 패스워드 : <%=data2 %></p>
+		<p>3. 텍스트에어리어 : <%=data3 %></p>
+		<p>4. 히든 : <%=data4 %></p>
+		<p>5. 이메일 : <%=data5 %></p>
+		<p>6. 날짜 : <%=data6 %></p>
+		<p>7. 숫자 : <%=data7 %></p>
+		<p>8. 라디오 : <%=data8 %></p>
+		<p>9. 셀렉트 : <%=data9 %></p>
+		<p>10. 체크박스 : 
+			<% 
+				
+				if (data10 != null) {
+					for (int i = 0; i < data10.length; i++) {
+						out.println(data10[i]);			
+					}								
+				}
+				else {
+					out.println("없음");
+				}
+		
+			%>
+		</p>
+	</fieldset>
+	
 
 </body>
 </html>
