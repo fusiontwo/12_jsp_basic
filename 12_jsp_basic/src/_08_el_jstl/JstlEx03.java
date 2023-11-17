@@ -24,6 +24,7 @@ public class JstlEx03 extends HttpServlet {
 		
 //		ArrayList<ProductDTO> productList = new ArrayList<ProductDTO>();
 		ArrayList<ProductDTO> productList = new ArrayList<ProductDTO>();
+		// 아래 for문을 주석 처리하면 데이터가 없어서 jstlEx03.jsp에서 "조회된 데이터가 없습니다."가 출력됨.
 		for (int i = 1; i < 10; i++) {
 			ProductDTO productDTO = new ProductDTO();
 			productDTO.setPdCd("P00" + i);
@@ -33,7 +34,7 @@ public class JstlEx03 extends HttpServlet {
 			productDTO.setMgrCd("mgr" + i);
 			productDTO.setMgrNm("홍길동" + i);
 			productList.add(productDTO);
-		}
+		} 
 		
 		request.setAttribute("datas", datas);
 		request.setAttribute("productList", productList);
