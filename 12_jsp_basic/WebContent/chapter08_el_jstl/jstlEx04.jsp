@@ -44,8 +44,17 @@
 	</c:if>
 
 	<h3>날짜 형식</h3>
+	<p>${now }</p> <!-- 형식 x -->
+	<p><fmt:formatDate value="${now }"/></p> <!-- 기본 형식 yyyy.MM.dd -->
+	<p><fmt:formatDate value="${now }" pattern="yyyy-MM-dd"/></p>
+	<p><fmt:formatDate value="${now }" pattern="yyyy년MM월dd일 hh시mm분ss초"/></p>
 	
 	<h3>숫자 형식</h3>
+	<p>${nData }</p> <!-- 형식 -->
+	<p><fmt:formatNumber value="${nData }"/> </p> <!-- 기본형식 > 세자리 , 표현 -->
+	<p><fmt:formatNumber value="${nData }" pattern=".0"/> </p> <!-- 소수점 1자리 표현 -->
+	<p><fmt:formatNumber value="${nData }" pattern=".00"/> </p> <!-- 소수점 2자리 표현 -->
+	<p><fmt:formatNumber value="${nData }" pattern="#,##0.0"/> </p> <!-- 세라지 , 표현 + 소수점 1자리 표현 -->
 	
 </body>
 </html>
