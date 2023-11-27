@@ -46,6 +46,7 @@ public class Upload1 extends HttpServlet {
 		String saveDirectory = "C:\\Users\\19_web_cyr\\git\\12_jsp_basic\\12_jsp_basic\\WebContent\\chapter09_file\\fileRepository";
 		
 		// MultipartRequest 이 코드가 실제로 파일 업로드를 담당하는 부분이다.
+		// WEB-INF > lib > cos.jar 파일을 추가해야 한다.
 		MultipartRequest multipartRequest = new MultipartRequest(request, saveDirectory, 1024 * 1024 * 10, "utf-8", new DefaultFileRenamePolicy());
 		
 		Enumeration<?> files = multipartRequest.getFileNames(); // <input type="file">인 모든 파라메타를 반환
