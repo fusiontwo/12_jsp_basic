@@ -22,7 +22,7 @@ public class Update extends HttpServlet {
 	
 		request.setCharacterEncoding("utf-8");
 		
-		String saveDirectory = "C:\\Users\\user\\git\\12_jsp_basic\\12_jsp_basic\\WebContent\\chapter09_file\\fileRepository";
+		String saveDirectory = "C:\\Users\\19_web_cyr\\git\\12_jsp_basic\\12_jsp_basic\\WebContent\\chapter09_file\\fileRepository";
 		
 		MultipartRequest multipartRequest = new MultipartRequest(request , saveDirectory , 1024*1024*30 , "utf-8" , new DefaultFileRenamePolicy());// 새로운 파일 업로드
 		String deleteFileName = multipartRequest.getParameter("deleteFileName");

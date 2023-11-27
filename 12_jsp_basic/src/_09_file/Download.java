@@ -25,7 +25,7 @@ public class Download extends HttpServlet {
 		
 		request.setCharacterEncoding("utf-8");
 		
-		String saveDirectory = "C:\\Users\\user\\git\\12_jsp_basic\\12_jsp_basic\\WebContent\\chapter09_file\\fileRepository";
+		String saveDirectory = "C:\\Users\\19_web_cyr\\git\\12_jsp_basic\\12_jsp_basic\\WebContent\\chapter09_file\\fileRepository";
 		String fileName = request.getParameter("fileName");
 		
 		String downloadFilePath = saveDirectory + "\\" + fileName; 

@@ -24,7 +24,7 @@ public class Upload2 extends HttpServlet {
        
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-		String saveDirectory = "C:\\Users\\user\\git\\12_jsp_basic\\12_jsp_basic\\WebContent\\chapter09_file\\fileRepository";
+		String saveDirectory = "C:\\Users\\19_web_cyr\\git\\12_jsp_basic\\12_jsp_basic\\WebContent\\chapter09_file\\fileRepository";
 		
 		MultipartRequest multipartRequest = new MultipartRequest(request,saveDirectory,1024 * 1024 * 100,"utf-8",new DefaultFileRenamePolicy());
 		

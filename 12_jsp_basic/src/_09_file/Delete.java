@@ -20,7 +20,7 @@ public class Delete extends HttpServlet {
 		
 		String deleteFileName = request.getParameter("deleteFileName");
 		// 파일의 저장 경로는 웹서비스의 접근 경로가 아닌 물리적인 실제 경로를 적어주어야 한다.
-		String saveDirectory = "C:\\Users\\user\\git\\12_jsp_basic\\12_jsp_basic\\WebContent\\chapter09_file\\fileRepository";
+		String saveDirectory = "C:\\Users\\19_web_cyr\\git\\12_jsp_basic\\12_jsp_basic\\WebContent\\chapter09_file\\fileRepository";
 
 		File file = new File(saveDirectory + "\\" + deleteFileName);  // 파일 삭제
 		
